@@ -1,12 +1,8 @@
 import { NextPage } from "next";
-import { Layout } from "../../components/layout/layout";
+import { DashboardPage } from "../../views/dashboard/dashboard";
  
 const Admin: NextPage = () => {
-    return (
-        <Layout>
-            <p>aaaa</p>
-        </Layout>
-    );
+    return <DashboardPage />
 }
 
 export default Admin;

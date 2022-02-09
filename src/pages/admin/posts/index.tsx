@@ -1,11 +1,9 @@
 import { NextPage } from "next";
-import { Layout } from "../../../components/layout/layout";
+import { PostsPage } from "../../../views/posts/posts";
 
 const Posts: NextPage = () => {
     return (
-        <Layout>
-            <p>bbbb</p>
-        </Layout>
+        <PostsPage />
     );
 }
 
