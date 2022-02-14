@@ -1,0 +1,17 @@
+package-lock.json
+node_modules
+.next
+dist
+src/codegen
+server/src/codegen
+server/dist
+src/segment
+src/static
+sitespeed-result
+eslint-plugin-pure-use-styles
+public
+storybook-static
+src/ui-kit/ui-care-type-icon/components
+src/ui-kit/ui-icons/no-props-icons
+src/ui-kit/ui-icons/svgs
+*.clinic*
