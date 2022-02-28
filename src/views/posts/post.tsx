@@ -1,13 +1,22 @@
+import { useMutation } from '@apollo/client';
 import { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import client from '../../../apollo-client';
 import { Layout } from '../../components/layout/layout';
+import { Post } from '../../pages/admin/posts';
 import { PostProps } from '../../pages/admin/posts/[slug]';
+import { EDIT_POST } from '../../queries/edit-post';
 
 const PostPage: React.FC<PostProps> = ({ post }) => {
   const [form, setForm] = useState(post);
 
+  const [mutateFunction, { data, error, loading }] = useMutation(EDIT_POST, { client: client });
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    mutateFunction({
+      variables: { post: { id: form.id, title: form.title, slug: form.slug, text: form.text } },
+    });
     console.log({ form });
   };
   return (
