@@ -5,6 +5,7 @@ export const GET_POSTS = gql`
     results: getPosts {
       posts {
         id
+        slug
         title
         text
       }

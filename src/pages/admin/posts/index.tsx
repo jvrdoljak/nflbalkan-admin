@@ -23,9 +23,6 @@ export default Posts;
 export async function getServerSideProps() {
   const { data } = await client.query({
     query: GET_POSTS,
-    variables: {
-      id: 23,
-    },
   });
 
   return {
